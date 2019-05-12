@@ -1,0 +1,37 @@
+
+
+
+
+mixin block_simple(data)
+	.block
+		i.block-icon= data.icon
+		.block-content
+			p.block-title= data.name
+			p.block-value $
+				span= data.value
+
+mixin indicator(data)
+	li.block-indicator(class=data.class)= data.name
+
+mixin statusItem(data)
+	li.block-statusItem
+		span.statusIndicator(class=data.class)
+		= data.name
+		span= data.value
+
+mixin item_date(data)
+	li.select-item
+		span= data.name
+
+mixin select_date
+	.select.select_date
+		.select-wrapper
+			input(type='text')
+			ul.select-list
+				+item_date({name: '10 Mar - 10 Apr'})
+				+item_date({name: '10 Apr - 10 May'})
+				+item_date({name: '10 May - 10 Jun'})
+				+item_date({name: '10 Jun - 10 Jul'})
+
+
+
