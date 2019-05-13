@@ -1,6 +1,38 @@
+mixin nav-link(data)
+	li.nav-link
+		a(href= data.href)= data.name
 
+mixin btn(data)
+	.btn(class= data.class)
+		img(src= data.src)
+		p= data.name
 
+mixin sidebar-link(data)
+	li.sidebar-link
+		a
+			img(src= data.src)
 
+mixin sidebar-category(data)
+	li
+		a(class= data.href)
+			img(src='../../../src/images/icons/right-arrow.svg')
+		= data.name 
+
+mixin sidebar-slide(data)
+	.slide
+		.slide-bg(style='background-image: url(../../../../src/images/'+data.bg+');')
+		.slide-content
+			h2.slide-title= data.title
+			p.slide-subtitle= data.subtitle
+			if data.text 
+				p.slide-text= data.text
+			if data.btnName
+				+btn({class: ''+data.btnClass+'', name: ''+data.btnName+'', src: ''+data.btnSrc+''})
+
+mixin item-header(data)
+	.item-header
+		p.item-name= data.name
+		img.item-share(src= data.src)
 
 mixin block_simple(data)
 	.block

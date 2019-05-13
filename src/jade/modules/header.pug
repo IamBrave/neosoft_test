@@ -3,17 +3,34 @@ header.header
 		.header-wrapper
 			.cart
 				.cart-content
+					h3.cart-title.title Your shopping cart
+					img(class='cart-icon', src='../../../src/images/icons/cart.png')
+					p.cart-text.cart-text_count
+						span 0 
+						| items in cart
+					p.cart-text.cart-text_total Subtotal: $
+						span 0
 				.cart-buttons
+					+btn({class: 'btn_primary', name: 'clear', src: '../../../src/images/icons/close_green.png'})
+					+btn({class: 'btn_secondary', name: 'checkout', src: '../../../src/images/icons/cart_blue.png'})
 			.search
-				h3.search-title
+				h3.search-title.title Search our catalog
 				.search-row
-					label.search-label
+					label.search-label Category:
 					select.search-select
 				.search-row
 					form.search-form
-						label.search-label
+						label.search-label Keywords:
 						input.search-input
 						input.search-submit
+			nav.nav
+				ul.nav-menu
+					+nav-link({name: 'homepage', href:'#'})
+					+nav-link({name: 'browse all', href:'#'})
+					+nav-link({name: 'search', href:'#'})
+					+nav-link({name: 'support', href:'#'})
+					+nav-link({name: 'contact us', href:'#'})
+
 			
 		
 

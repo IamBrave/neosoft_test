@@ -1,0 +1,42 @@
+aside.sidebar
+	.logo
+		.logo-icon
+		.logo-content
+			p.logo-title Computerstore.
+				span com
+			p.logo-subtitle place your slogantext here
+	nav.sidebar-nav
+		ul.sidebar-menu
+			+sidebar-link({src: '../../../src/images/icons/icon_home.png'})
+			+sidebar-link({src: '../../../src/images/icons/key.png'})
+			+sidebar-link({src: '../../../src/images/icons/mail.png'})
+	section.sidebar-categories
+		+item-header({name: 'product categories', src: '../../../src/images/icons/share_green.png'})
+		ul
+			+sidebar-category({name: 'Desktop', href: '#'})
+			+sidebar-category({name: 'Notebooks', href: '#'})
+			+sidebar-category({name: 'Monitors', href: '#'})
+			+sidebar-category({name: 'Printers', href: '#'})
+			+sidebar-category({name: 'Speakers', href: '#'})
+			+sidebar-category({name: 'Scanners', href: '#'})
+			+sidebar-category({name: 'Modems', href: '#'})
+			+sidebar-category({name: 'Processors', href: '#'})
+			+sidebar-category({name: 'System boards', href: '#'})
+			+sidebar-category({name: 'Display cards', href: '#'})
+			+sidebar-category({name: 'Soundmaps', href: '#'})
+			+sidebar-category({name: 'Keyboards', href: '#'})
+			+sidebar-category({name: 'Mice', href: '#'})
+			+sidebar-category({name: 'PDAs', href: '#'})
+			+sidebar-category({name: 'Pocket PC', href: '#'})
+			+sidebar-category({name: 'Hard drivers', href: '#'})
+			+sidebar-category({name: 'Printers', href: '#'})
+			+sidebar-category({name: 'Speakers', href: '#'})
+			+sidebar-category({name: 'Scanners', href: '#'})
+			+sidebar-category({name: 'DVD', href: '#'})
+			+sidebar-category({name: 'CDR/CDRW', href: '#'})
+			+sidebar-category({name: 'Webcams', href: '#'})
+			+sidebar-category({name: 'Software', href: '#'})
+			+sidebar-category({name: 'Other', href: '#'})
+		+sidebar-slide({bg: 'notebook.jpg', title: 'Nullatiam', subtitle: 'feugiat illum facilisi', btnClass: 'btn_primary', btnSrc: '../../../src/images/icons/btn_more_green.png', btnName: 'view category'})
+		+sidebar-slide({bg: 'camera.jpg', title: 'Tempus', subtitle: 'etiam seddolore', text:'Molestieconsquat, a illum dolore eu feugiat a the nulla facilisi at veroeros', btnClass: 'btn_primary', btnSrc: '../../../src/images/icons/btn_more_blue.png', btnName: 'learn more'})
+		
