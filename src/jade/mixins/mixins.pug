@@ -34,36 +34,43 @@ mixin item-header(data)
 		p.item-name= data.name
 		img.item-share(src= data.src)
 
-mixin block_simple(data)
-	.block
-		i.block-icon= data.icon
-		.block-content
-			p.block-title= data.name
-			p.block-value $
-				span= data.value
+mixin item-ulLink(data)
+	li
+		a(href= data.href)
+			img(src='../../../src/images/icons/btn_more_green.png')
+		| #{data.name}
 
-mixin indicator(data)
-	li.block-indicator(class=data.class)= data.name
+mixin news-item(data)
+	li.news-item
+		a.news-date= data.date
+		p.news-excerpt= data.text
 
-mixin statusItem(data)
-	li.block-statusItem
-		span.statusIndicator(class=data.class)
-		= data.name
-		span= data.value
-
-mixin item_date(data)
-	li.select-item
-		span= data.name
-
-mixin select_date
-	.select.select_date
-		.select-wrapper
-			input(type='text')
-			ul.select-list
-				+item_date({name: '10 Mar - 10 Apr'})
-				+item_date({name: '10 Apr - 10 May'})
-				+item_date({name: '10 May - 10 Jun'})
-				+item_date({name: '10 Jun - 10 Jul'})
-
-
-
+mixin item(data)
+	if data.src 
+		.item
+			+item-header({name: 'Featured product', src: '../../../src/images/icons/share_green.png'})
+			.item-wrapper
+				.item-image
+					img(src= data.src)
+				.item-price
+					p.subtitle
+					p.value $  #{data.price}
+				.item-content
+					h4.item-title= data.title
+					p.item-text= data.text
+				.item-buttons
+					+btn({name: 'More info', class: 'primary', src: '../../../src/images/icons/btn_more_green.png'})
+					+btn({name: 'add to cart', class: 'secondary', src: '../../../src/images/icons/cart_blue.png'})
+	else if data.class === 'item_list'
+		.item(class= data.class)
+			+item-header({name: data.headerName, src: '../../../src/images/icons/share_green.png'})
+			.item-wrapper
+				ul.item-list
+					block list
+	else if data.class === 'item_news'
+		.item(class= data.class)
+			+item-header({name: data.headerName, src: '../../../src/images/icons/share_green.png'})
+			.item-wrapper
+				ul.news-list
+					block news
+					
