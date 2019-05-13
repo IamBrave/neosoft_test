@@ -7,12 +7,100 @@
 	font-size: $fs-primary
 	font-family: $font-primary
 .sidebar
+	display: flex 
+	flex-direction: column
 	width: 22%
-	&-list
+	padding: 30px 0
+	&-nav
+		width: 100%
+		padding: 10px 0
+		background: $gradient-sidebar-sub
+	&-menu
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+		padding: 0px
+		margin: 0
+		list-style: none
 		li
+			padding: 0 13px
+			border-left: 1px dashed #fff
+			&:first-child
+				border: none
+	&-list
+		display: flex
+		flex-wrap: wrap
+		flex-direction: row
+		align-items: center
+		height: auto
+		padding: 20px
+		margin: 0 auto
+		list-style: none
+		li
+			width: 50%
 			a
 				img
 					width: 10px
+.logo
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+		padding: 30px 0
+		&-icon
+			min-width: 27px
+			width: 27px
+			height: 27px
+			margin-right: 8px
+			background-image: $gradient-logo 
+			border-radius: 25px
+		&-content
+			display: flex
+			flex-direction: column
+		&-title
+			margin: 0
+			font-size: $fs-logo
+			font-family: $font-header
+			text-transform: uppercase
+			color: $color-text-header
+			line-height: 0.8 
+			span
+				color: #8eb7d7
+		&-subtitle
+			margin: 0 0 1px
+			color: #8eb7d7
+			font-size: $fs-logo-sub
+			font-weight: 600
+			font-family: 6px
+			text-transform: uppercase
+			letter-spacing: -0.8px
+.item
+	&-header
+		position: relative
+		display: flex
+		flex-direction: row
+		align-items: center
+		padding: 14px 0 10px 17px
+		background: $gradient-sidebar
+		border-width: 2px
+		border-style: solid
+		border-image: linear-gradient(to bottom, #c4dbf2, #f5f8fd) 5
+		box-shadow: $color-shadow-primary
+	&-name
+		margin: 0 7px 0 0
+		font-size: $fs-item-title
+		font-family: $font-header
+		color: $color-text-header
+		text-transform: uppercase
+	&-share
+		position: relative
+		top: 2px
+		width: 16px
+		height: 16px
+		
+
+	
 .wrapper
 	width: 78%
 .footer
