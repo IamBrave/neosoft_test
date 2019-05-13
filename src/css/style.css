@@ -1,0 +1,40 @@
+@import url("http://allfont.ru/allfont.css?fonts=bebas");
+@import url("http://allfont.ru/allfont.css?fonts=impact");
+@import url("https://nomail.com.ua/api/font-face/1467.css");
+@import url("https://nomail.com.ua/api/font-face/12637.css");
+/*   --------FONTS-------   */
+/*   --------COLORS-TEXT-------   */
+/*   --------COLORS-ITEMS-------   */
+/*   --------GRADIENTS-------   */
+/*   --------SIZES-------   */
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0 100px;
+  font-size: 10px;
+  font-family: "Tahoma";
+}
+
+.sidebar {
+  width: 22%;
+}
+
+.sidebar-list li a img {
+  width: 10px;
+}
+
+.wrapper {
+  width: 78%;
+}
+
+.footer {
+  width: 100%;
+}

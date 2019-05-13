@@ -19,7 +19,8 @@ const PATHS = {
 const common = merge([
   {
     entry: {
-      'index': PATHS.source + '/js/main.js',
+			'index': PATHS.source + '/js/main.js',
+			'sass': PATHS.source + '/sass/style.sass',
       // 'blog': PATHS.source + '/pages/blog/blog.js',
     },
     output: {

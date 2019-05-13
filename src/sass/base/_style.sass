@@ -1,11 +1,21 @@
 .page
 	display: flex
 	flex-direction: row
-	background: #000
+	flex-wrap: wrap
+	margin: 0 auto
+	padding: 0 100px
+	font-size: $fs-primary
+	font-family: $font-primary
+.sidebar
+	width: 22%
+	&-list
+		li
+			a
+				img
+					width: 10px
+.wrapper
+	width: 78%
+.footer
+	width: 100%
 
-	.sidebar
-		&-list
-			li
-				a
-					img
-						width: 20px
+
