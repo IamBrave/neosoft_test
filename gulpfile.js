@@ -88,7 +88,7 @@ function clean(){
 function imageMinify(){
 	return gulp.src(images)
 			.pipe(imagemin())
-			.pipe(gulp.dest('dist/img'))
+			.pipe(gulp.dest('dist/images'))
 }
 function iconsMinify(){
 	return gulp.src(icons)
