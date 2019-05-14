@@ -1,26 +1,36 @@
 header.header
 	.container
 		.header-wrapper
-			.cart
-				.cart-content
-					h3.cart-title.title Your shopping cart
-					img(class='cart-icon', src='../../../src/images/icons/cart.png')
-					p.cart-text.cart-text_count
-						span 0 
-						| items in cart
-					p.cart-text.cart-text_total Subtotal: $
-						span 0
-				.cart-buttons
-					+btn({class: 'btn_primary', name: 'clear', src: '../../../src/images/icons/close_green.png'})
-					+btn({class: 'btn_secondary', name: 'checkout', src: '../../../src/images/icons/cart_blue.png'})
-			nav.nav
-				ul.nav-menu
-					+nav-link({name: 'homepage', href:'#'})
-					+nav-link({name: 'browse all', href:'#'})
-					+nav-link({name: 'search', href:'#'})
-					+nav-link({name: 'support', href:'#'})
-					+nav-link({name: 'contact us', href:'#'})
-
-			
-		
-
+			.header-sidebarBlock
+				.logo
+					.logo-icon
+					.logo-content
+						p.logo-title Computerstore.
+							span com
+						p.logo-subtitle place your slogantext here
+				nav.sidebar-nav
+					ul.sidebar-menu
+						+sidebar-link({src: '../../../src/images/icons/icon_home.png'})
+						+sidebar-link({src: '../../../src/images/icons/key.png'})
+						+sidebar-link({src: '../../../src/images/icons/mail.png'})
+			.header-mainBlock
+				.cart
+					.cart-content
+						h3.cart-title.title Your shopping cart
+						img(class='cart-icon', src='../../../src/images/icons/cart.png')
+						.cart-textWrapper
+							p.cart-text.cart-text_count
+								span 0 
+								| items in cart
+							p.cart-text.cart-text_total Subtotal: $
+								span 0
+					.buttons
+						+btn({href: '#', class: 'btn_primary', name: 'clear', src: '../../../src/images/icons/close_green.png'})
+						+btn({href: '#', class: 'btn_secondary', name: 'checkout', src: '../../../src/images/icons/cart_blue.png'})
+				nav.nav
+					ul.nav-menu
+						+nav-link({name: 'homepage', href:'#'})
+						+nav-link({name: 'browse all', href:'#'})
+						+nav-link({name: 'search', href:'#'})
+						+nav-link({name: 'support', href:'#'})
+						+nav-link({name: 'contact us', href:'#'})

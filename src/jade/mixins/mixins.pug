@@ -31,14 +31,14 @@ mixin sidebar-slide(data)
 
 mixin item-header(data)
 	.item-header
-		p.item-name= data.name
+		p.item-name.title= data.name
 		img.item-share(src= data.src)
 
 mixin item-ulLink(data)
 	li
 		a(href= data.href)
 			img(src='../../../src/images/icons/btn_more_green.png')
-		| #{data.name}
+			| #{data.name}
 
 mixin news-item(data)
 	li.news-item
@@ -53,14 +53,14 @@ mixin item(data)
 				.item-image
 					img(src= data.src)
 				.item-price
-					p.subtitle
-					p.value $  #{data.price}
+					p.value $#{data.price}
+						span.subtitle Price
 				.item-content
 					h4.item-title= data.title
 					p.item-text= data.text
-				.item-buttons
-					+btn({name: 'More info', class: 'primary', src: '../../../src/images/icons/btn_more_green.png'})
-					+btn({name: 'add to cart', class: 'secondary', src: '../../../src/images/icons/cart_blue.png'})
+				.buttons
+					+btn({href: '', name: 'More info', class: 'primary', src: '../../../src/images/icons/more_search_green.png'})
+					+btn({href: '', name: 'add to cart', class: 'secondary', src: '../../../src/images/icons/cart_blue.png'})
 	else if data.class === 'item_list'
 		.item(class= data.class)
 			+item-header({name: data.headerName, src: '../../../src/images/icons/share_green.png'})

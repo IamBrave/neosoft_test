@@ -1,12 +1,11 @@
 section.wrapper
-	include ../modules/header
+	include ../modules/left_sidebar
 	section.wrapper-content
 		+item({src: '../../../src/images/item_1.png', price: '699.99', title: 'Sed facilisi tempus', text: 'Molestieconsquat, a illum dolore eu feugiat a the nulla facilisi.'})
 		+item({src: '../../../src/images/item_2.png', price: '899.99', title: 'Lorem ipsum dolor', text: 'Molestieconsquat, a illum dolore eu feugiat a the nulla facilisi.'})
 		+item({src: '../../../src/images/item_3.png', price: '149.99', title: 'Feidfu dolore', text: 'Molestieconsquat, a illum dolore eu feugiat a the nulla facilisi.'})
 		+item({src: '../../../src/images/item_4.png', price: '549.99', title: 'Nullam sed etiami', text: 'Molestieconsquat, a illum dolore eu feugiat a the nulla facilisi.'})
-	section.wrapper-bottom
-		.wrapper-block
+		section.wrapper-bottom
 			+item({headerName: 'Nullam sed molestie', class: 'item_list'})
 				block list
 					+item-ulLink({name: 'Sed vitae felis. In vel pede vivamus nulla', href: '#' })
